@@ -252,12 +252,10 @@ main{
     }
    
     .header-section{
-        position: relative;
-        width: 100%;
         background: #2D25A0;
         height: 167vh;
-        
         overflow: hidden;
+        width: 100%;
 
     }
     .header-section .fa{
