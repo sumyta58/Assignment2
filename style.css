@@ -43,6 +43,7 @@
     font-size: 15px; 
     
 }
+
 .Login-right, .nav-context-left-side a,.last-higlight-left a{
     background: #E02C6D;
     width: 123px;
@@ -108,17 +109,27 @@
 .nav-context-right-image img{
     width: 556.01px;
      height: 438px;
+     transition: transform 0.6s;
+     transform-style: preserve-3d;
     
 }
-
+.nav-context-right-image img:hover {
+    transition: 0.9s;
+    transform: rotateY(180deg);
+  }
 .middle-work-context{
     display: flex;
    
 }
 .header-section{
     background: #2D25A0;
-    height: 90vh;
-    overflow: hidden;
+    min-height:85vh;
+    width:100%;
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    top: 0;
+    overflow: auto;
 }
 
 /* middle player gird view */
@@ -154,8 +165,9 @@
     
 }
 main{
+    cursor: pointer;
     margin-top: 50px;
-    margin-left: 180px;
+    margin-left: 210px;
     margin-right: 180px;
 }
 
@@ -230,6 +242,12 @@ main{
     margin-right: 11px;
 }
 
+.footer-icons i:hover{
+transition: 0.5s;
+background-color: rgb(255, 0, 98);
+color: black;
+}
+
 .Footer-copyright{
     
     margin-left: 32%;
@@ -243,51 +261,61 @@ main{
 
 /* responise website */
 
-@media  only screen and (max-width: 700px){
-    body{
-       margin: 0;
-       padding: 0;
-       box-sizing: border-box;
-      width: 100%;
-    }
-   
-    .header-section{
-        background: #2D25A0;
-        height: 167vh;
-        overflow: hidden;
-        width: 100%;
-
-    }
-    .header-section .fa{
-    display: inline-block;
-    color: white;
-    margin-top: 60px;
-    margin-left: 30px;
-    font-size: 20px;
-    cursor: pointer;
-    }
-   
+@media   screen and (max-width: 500px){
+    
     .nav-left {
         display: none;
     }
+    
+    .nav-menu{
+        position: absolute;
+        width: 310px;
+        height: 44px;
+        left: 156px;
+        top: 42px;
+    }
+    .header-section{
+       overflow: hidden;
+       position: relative;
+       height: 128vh;
+       width: 100%;
+
+    }
+    .frist{
+        padding-top:60px ;
+        width: 100px;
+        height: 90px;
+        margin-left: 30px;
+    }
+    .frist .fa{
+       
+     padding-top: 50px;
+     display: inline;
+     color: white;
+     font-size: 20px;
+     cursor: pointer;
+    }
+   
+    
+   
     .Login-right{
+     display: inline;
      float: right;
      margin-left: 190px;
     }
     .nav-context-left-side{
         position:absolute;
-        width: 485px;
-        height: 230px;
+        width: 380px;
+        height: 200px;
         left: 20px;
         top: 207px;
-        bottom: 240px;
+        margin-top: 20px;
+        margin-left:10px ; 
         
        
     }
-    .nav-context-left-side{
-       
-        margin-top: 20px;
-        margin-left:10px ;  
+    .nav-context-left-side a{
+      margin-bottom: 0px;
     }
     
    
@@ -296,7 +324,7 @@ main{
         height: 190px;
         position: absolute;
         top: 550px;
-        left: 10px;
+        left: 50px;
         right: 20px;
     }
     .nav-context-right-image img{
@@ -304,14 +332,17 @@ main{
         height: 300px;
     }
     main{
-      margin-left: 50px;
-      justify-content: center;
-      align-items: center;
+       margin: 0;
+       padding: 0;
+       justify-content: center;
+       align-items: center;
     }
     .cards{
         width: 330px;
-        height: 455px;
+        height: 460px;
+        margin-top: 30px;
         margin-bottom: 20px;
+        margin-left:22.5%;
     }
     .cards img{
         width: 302px;
@@ -330,7 +361,7 @@ main{
     
     
     .last-content{
-        width: 1000px;
+        width: 420px;
         height: 427px;
         display: block;
         margin-top: 10px;
@@ -339,25 +370,36 @@ main{
     }
     .last-higlight-left{
       margin-bottom: 50px;
+      width: 410px;
     }
    
     .last-higlight-left h1{
         font-size: 50px;
     }
     .last-higlight-rigth{
-        width: 328px;
-        height: 248px;
+        margin-left: 40px;
+        width: 300px;
+        height: 150px;
     }
+    .last-higlight-rigth img{
+        width: 350px;
+        height: 250px;
+    }
+    
+    footer{
+        width: 200px;
+    } 
    
    .Footer-work{
-    margin-top: 500px;
+    margin-top: 350px;
     margin-left: 40px;
-    margin-right: 30px;
-    margin-bottom: 63px;
-    width: 483.87px;
-    height: 213px;
+    width: 300px;
+    height: 150px;
     align-items: center;
     justify-content: center;
+}
+.Footer-work img{
+    width: 200px;
 }
   }
 
